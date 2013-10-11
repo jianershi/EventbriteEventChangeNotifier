@@ -18,4 +18,5 @@ It is meant to be run in the background, so a better way maybe
 ```screen -dmS "Eventbrite Monitor" node app.js```
 
 The notification you got will be like this:
+
 ![sampleSMS](https://raw.github.com/paulshi/EventbriteEventChangeNotifier/master/smsSample.png)
