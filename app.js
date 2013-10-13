@@ -4,7 +4,8 @@ var count_total = 0;
 var last_modified_date = "";
 /* Module dependencies */
 var request =  require('request')
-  , twilio = require('twilio')
+  , twilio = require('twilio')	//using twilio for sms
+  , sendEmail = require('./sendEmail')
   , apiconfig = require('./apiconfig');
 
 var time_interval = 2*60*1000;
@@ -16,6 +17,9 @@ api_address = "https://www.eventbrite.com/json/event_get?app_key="+apiconfig.eve
 console.log("Programming Starting...");
 console.log("Getting the data from Eventbrite every 2 mins")
 setInterval(function(){check_using_modified_date()}, time_interval);
+
+//debug only
+// check_using_modified_date();
 
 function check_using_modified_date()
 {
@@ -31,7 +35,9 @@ function check_using_modified_date()
 		console.log("Event is Modified, Inform Immediately");
 		console.log(modifiedDate);
 		last_modified_date = modifiedDate;
-		send_sms('Eventbrite info for id '+apiconfig.eventbrite_event_id+ ' is modified on '+modifiedDate+ ' url: '+eventUrl);
+		messageToBeSent='Eventbrite info for id '+apiconfig.eventbrite_event_id+ ' is modified on '+modifiedDate+ ' url: '+eventUrl;
+		send_sms(messageToBeSent);
+		sendEmail.send_email(messageToBeSent);
 	}
 	else
 	{

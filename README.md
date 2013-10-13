@@ -1,6 +1,6 @@
 Eventbrite Event Change Notifier
 ======================
-Notifies you when an orgnizer of the event made any modifications to the event and notifies you through SMS
+Notifies you when an orgnizer of the event made any modifications to the event and notifies you through SMS and Email
 
 The API uses ```modified``` attribute in the Eventbrite API
 
@@ -9,7 +9,7 @@ The script is written in [node.js](http://nodejs.org/)
 ## Install
 ```npm install```
 ## API Keys
-Fill in ```apiconfig.sample.js``` and rename it to ```apiconfig.js```. You will need twilio and eventbrite API keys. Notice the interval is set to check every 2 mins. Eventbrite API has limit of 1k request/day.
+Fill in ```apiconfig.sample.js``` and rename it to ```apiconfig.js```. You will need twilio and eventbrite API keys. Notice the interval is set to check every 2 mins. Eventbrite API has limit of 1k request/day. Also settings for Email also need to be set.
 
 ## Run
 ```node app.js```
