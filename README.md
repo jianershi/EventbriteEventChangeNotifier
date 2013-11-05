@@ -17,12 +17,17 @@ Fill in ```apiconfig.sample.js``` and rename it to ```apiconfig.js```. You will 
 It is meant to be run in the background, so a better way maybe
 ```screen -dmS "Eventbrite Monitor" node app.js```
 
+or using forever
+
+```forever start app.js```
+
 The notification you got will be like this:
 
 ![sampleSMS](https://raw.github.com/paulshi/EventbriteEventChangeNotifier/master/smsSample.png)
 
 ## License
 
+```
 The MIT License (MIT)
 
 Copyright (c) 2013 Jianer Shi
@@ -44,3 +49,4 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
+```
