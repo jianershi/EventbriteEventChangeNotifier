@@ -1,5 +1,4 @@
-Eventbrite Event Change Notifier
-======================
+#Eventbrite Event Change Notifier
 Notifies you when an orgnizer of the event made any modifications to the event and notifies you through SMS and Email
 
 The API uses ```modified``` attribute in the Eventbrite API
@@ -30,7 +29,7 @@ The notification you got will be like this:
 ```
 The MIT License (MIT)
 
-Copyright (c) 2013 Jianer Shi
+Copyright (c) 2013 Jianer Shi (hipaulshi@gmail.com)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
