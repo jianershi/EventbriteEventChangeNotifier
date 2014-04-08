@@ -1,4 +1,3 @@
-
 /*initialize count_total: the total number of ticket events*/
 var count_total = 0;
 var last_modified_date = "";
@@ -12,7 +11,7 @@ var time_interval = 2*60*1000;
 // var time_interval = 5*1000; //for testing purpose only.
 
 //api address for eventbrite api
-api_address = "https://www.eventbrite.com/json/event_get?app_key="+apiconfig.eventbrite_api+"&id="+apiconfig.eventbrite_event_id
+api_address = "https://www.eventbrite.com/json/event_get?app_key="+apiconfig.eventbrite_api_key+"&id="+apiconfig.eventbrite_event_id
 
 console.log("Programming Starting...");
 console.log("Getting the data from Eventbrite every 2 mins")
